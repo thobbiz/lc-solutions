@@ -10,8 +10,6 @@ class Solution:
 
         # a map for storing anagrams and their correspoding strings in the list
         anagramMap = collections.defaultdict(list)
-        # list for result
-        result = []
 
         # iterate through each string in the list
         for word in strs:
