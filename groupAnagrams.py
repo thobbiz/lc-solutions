@@ -8,7 +8,7 @@ class Solution:
         if len(strs) == 1:
             return [strs]
 
-        # a map for storing anagrams and their correspoding strings in the list
+        # a map for storing anagrams and their corresponding strings in the list
         anagramMap = collections.defaultdict(list)
 
         # iterate through each string in the list
