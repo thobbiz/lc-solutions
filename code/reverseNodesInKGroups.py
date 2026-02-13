@@ -1,4 +1,3 @@
-from argparse import OPTIONAL
 from tokenize import group
 from typing import Optional
 
@@ -27,19 +26,19 @@ class Solution:
             kthNode = getKth(groupPrev, k)
             if not kthNode:
                 break
-                
+
             nextGroupHead = kthNode.next
-            
+
             prev, curr = nextGroupHead, groupPrev.next
             while curr != nextGroupHead:
                 temp = curr.next
                 curr.next = prev
                 prev = curr
                 curr = temp
-            
+
             newGroupTail = groupPrev.next
             groupPrev.next = kthNode
-            
+
             groupPrev = newGroupTail
-        
+
         return dummy.next
