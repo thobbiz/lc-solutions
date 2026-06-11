@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     MOD = 10**9 + 7
 
@@ -9,7 +12,7 @@ class Solution:
             max_dep = max(max_dep, self.dfs(g, y, x) + 1)
         return max_dep
 
-    def assignEdgeWeights(self, edges: Lisat[List[int]]) -> int:
+    def assignEdgeWeights(self, edges: List[List[int]]) -> int:
         n = len(edges) + 1
         g = [[] for _ in range(n + 1)]
         for u, v in edges:
