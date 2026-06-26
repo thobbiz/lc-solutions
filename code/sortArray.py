@@ -1,10 +1,12 @@
+from typing import List
+
+
 class Solution:
-
     def merge(self, A, p, q, r):
-        L = A[p:q + 1]
-        R = A[q + 1:r + 1]
+        L = A[p : q + 1]
+        R = A[q + 1 : r + 1]
 
-        i, j, k  = 0, 0, p
+        i, j, k = 0, 0, p
         lenL = len(L)
         lenR = len(R)
 
@@ -35,7 +37,7 @@ class Solution:
             self.merge(A, p, q, r)
 
     def sortArray(self, nums: List[int]) -> List[int]:
-        p  = 0
+        p = 0
         r = len(nums) - 1
         self.mergeSort(nums, p, r)
 
