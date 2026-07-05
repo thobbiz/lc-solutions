@@ -21,12 +21,32 @@ def characterReplacement(s: str, k: int) -> int:
     return res
 
 
+def charReplacement(s: str, k: int) -> int:
+    count = {}
+    left = 0
+    maxFreq = 0
+
+    for right in range(len(s)):
+        count[s[right]] = count.get(s[right], 0) + 1
+        maxFreq = max(maxFreq, count[s[right]])
+        if (right - left + 1) - maxFreq > k:
+            count[s[left]] -= 1
+            left += 1
+
+        print(f"C[{s[right]}] = {count[s[right]]}")
+        print(f"maxFreq = {maxFreq}")
+        print(f"right = {right}")
+        print(f"left = {left} \n\n")
+
+    return len(s) - left
+
+
 def main():
-    s = "ABAB"
-    k = 2
+    s = "AABABBA"
+    k = 1
 
     # Run the code
-    result = characterReplacement(s, k)
+    result = charReplacement(s, k)
     print(result)
 
 
