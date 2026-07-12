@@ -8,7 +8,6 @@ class Solution:
 
         for r in range(len(nums)):
             prefix += nums[r]
-
             res += hashMap.get((prefix - goal), 0)
 
             hashMap[prefix] = hashMap.get(prefix, 0) + 1
