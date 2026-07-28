@@ -1,7 +1,4 @@
-from typing import List
-
-
-def search(nums: List[int], target: int) -> int:
+def search(nums: list[int], target: int) -> int:
     n = len(nums)
     pivot = findPivot(nums)
 
@@ -16,7 +13,7 @@ def search(nums: List[int], target: int) -> int:
     return binSearch(nums, target, pivot + 1, n - 1)
 
 
-def findPivot(nums: List[int]) -> int:
+def findPivot(nums: list[int]) -> int:
     low = 0
     high = len(nums) - 1
 
@@ -29,7 +26,7 @@ def findPivot(nums: List[int]) -> int:
     return low
 
 
-def binSearch(nums: List[int], target: int, low: int, high: int) -> int:
+def binSearch(nums: list[int], target: int, low: int, high: int) -> int:
     while high >= low:
         mid = (high + low) // 2
         if target < nums[mid]:
