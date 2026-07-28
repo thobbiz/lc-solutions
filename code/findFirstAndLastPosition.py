@@ -11,7 +11,7 @@ class Solution:
                     left = mid + 1
                 elif nums[mid] > target:
                     right = mid - 1
-                else:s
+                else:
                     result = mid
                     if isFirst:
                         right = mid - 1
