@@ -8,7 +8,7 @@ class Solution:
                 if cur + w > capacity:
                     d += 1
                     cur = 0
-                cur += w
+                cur += wfet
             return d <= days
         lo, hi = max(weights), sum(weights)
         while lo < hi:
