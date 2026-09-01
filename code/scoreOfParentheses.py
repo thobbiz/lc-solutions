@@ -11,4 +11,4 @@ class Solution:
                 else:
                     stack.append(top * 2)
 
-            return stack[-1]
+        return stack[-1]
