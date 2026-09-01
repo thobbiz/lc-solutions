@@ -4,11 +4,8 @@ class Solution:
         for c in s:
             if c == "(":
                 stack.append(0)
-            elif c == ")":
-                top = stack[-1]
-                if top == 0:
-                    stack.append(1)
-                else:
-                    stack.append(top * 2)
+            else:
+                val = stack.pop()
+                stack[-1] += max(2 * val, 1)
 
         return stack[-1]
